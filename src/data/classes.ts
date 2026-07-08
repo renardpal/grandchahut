@@ -1,10 +1,11 @@
 export interface ClassSession {
   id: string
-  discipline: 'Art' | 'Music'
+  discipline: 'Acrobatie' | 'Musique' | 'Théâtre'
   name: string
   ageRange: string
   day: string
   time: string
+  month: string
   instructor: string
   spotsLeft: number
   description: string
@@ -12,98 +13,80 @@ export interface ClassSession {
 
 export const classes: Array<ClassSession> = [
   {
-    id: 'clay-critters',
-    discipline: 'Art',
-    name: 'Clay Critters',
-    ageRange: 'Ages 4–6',
-    day: 'Mondays',
-    time: '4:00 – 4:45 PM',
-    instructor: 'Odalys Feck',
-    spotsLeft: 3,
+    id: 'Les petits acrobates',
+    discipline: 'Acrobatie',
+    name: 'Les petits acrobates',
+    ageRange: 'pour les 3–6 ans',
+    day: 'Mardi',
+    time: '15h30 – 16h15',
+    month: 'avril à juin',
+    instructor: 'Miriam de Sela',
+    spotsLeft: 10,
     description:
       'Hand-building with air-dry clay — snails, hedgehogs, and whatever else wants to exist that week.',
   },
   {
-    id: 'ukulele-buddies',
-    discipline: 'Music',
-    name: 'Ukulele Buddies',
-    ageRange: 'Ages 6–8',
-    day: 'Mondays',
-    time: '5:00 – 5:45 PM',
-    instructor: 'Perryn Okafor-Diaz',
-    spotsLeft: 0,
+    id: 'Fais voir le son de tes joues',
+    discipline: 'Musique',
+    name: 'Fais voir le son de tes joues',
+    ageRange: 'pour les 3–6 ans',
+    day: 'Mardi',
+    time: '15h30 – 16h15',
+    month: 'octobre à janvier',
+    instructor: 'Sébastien Apert',
+    spotsLeft: 10,
     description:
       'Three chords, a dozen songs, and a lot of out-of-sync strumming that somehow still sounds good.',
   },
   {
     id: 'watercolor-wanderers',
-    discipline: 'Art',
+    discipline: 'Acrobatie',
     name: 'Watercolor Wanderers',
-    ageRange: 'Ages 7–10',
-    day: 'Tuesdays',
+    ageRange: 'pour les 7–11 ans',
+    day: 'Mardi',
     time: '4:15 – 5:15 PM',
-    instructor: 'Odalys Feck',
-    spotsLeft: 5,
+    month: 'octobre à janvier',
+    instructor: 'Miriam de Sela',
+    spotsLeft: 10,
     description:
       'Loose, wet-on-wet painting exercises focused on color mixing rather than "getting it right."',
   },
   {
     id: 'rhythm-lab',
-    discipline: 'Music',
+    discipline: 'Théâtre',
     name: 'Rhythm Lab',
-    ageRange: 'Ages 5–8',
-    day: 'Wednesdays',
+    ageRange: 'pour les 3–6 ans',
+    day: 'Mardi',
     time: '4:00 – 4:40 PM',
-    instructor: 'Tobias Marne',
-    spotsLeft: 2,
+    month: 'octobre à janvier',
+    instructor: 'Marion Sancellier',
+    spotsLeft: 10,
     description:
       'Drums, shakers, and body percussion. Loud, joyful, and surprisingly good for counting practice.',
   },
   {
-    id: 'sketchbook-club',
-    discipline: 'Art',
-    name: 'Sketchbook Club',
-    ageRange: 'Ages 9–12',
-    day: 'Wednesdays',
-    time: '5:00 – 6:00 PM',
-    instructor: 'Genna Vlk',
-    spotsLeft: 4,
-    description:
-      'A weekly prompt, a pencil, and forty-five minutes of quiet, focused drawing side by side.',
-  },
-  {
     id: 'beginner-piano',
-    discipline: 'Music',
+    discipline: 'Musique',
     name: 'Beginner Piano',
-    ageRange: 'Ages 6–9',
-    day: 'Thursdays',
+    ageRange: 'pour les 7–11 ans',
+    day: 'Mardi',
     time: '4:00 – 4:30 PM',
-    instructor: 'Perryn Okafor-Diaz',
-    spotsLeft: 1,
+    month: 'octobre à janvier',
+    instructor: 'Sébastien Apert',
+    spotsLeft: 10,
     description:
       'One-on-one keyboard time in a small shared studio — everyone gets fifteen minutes at the bench.',
   },
   {
-    id: 'mixed-media-mess',
-    discipline: 'Art',
-    name: 'Mixed Media Mess',
-    ageRange: 'Ages 5–7',
-    day: 'Fridays',
-    time: '4:00 – 4:45 PM',
-    instructor: 'Genna Vlk',
-    spotsLeft: 6,
-    description:
-      'Collage, tape, glitter glue, cardboard. An apron is strongly recommended.',
-  },
-  {
     id: 'young-vocalists',
-    discipline: 'Music',
-    name: 'Young Vocalists',
-    ageRange: 'Ages 8–12',
-    day: 'Fridays',
+    discipline: 'Théâtre',
+    name: 'Shakespeare et les autres',
+    ageRange: 'pour les 7–11 ans',
+    day: 'Mardi',
     time: '5:00 – 5:45 PM',
-    instructor: 'Tobias Marne',
-    spotsLeft: 3,
+    month: 'octobre à janvier',
+    instructor: 'Marion Sancellier',
+    spotsLeft: 10,
     description:
       'Group warm-ups, rounds, and a rotating songbook — building confidence more than pitch perfection.',
   },

@@ -24,7 +24,7 @@ export function Header() {
             className="h-6 w-6 shrink-0 text-[var(--color-terracotta)]"
             strokeWidth={2.5}
           />
-          Marigold &amp; Sound
+          Grand Chahut
         </Link>
 
         <nav className="hidden items-center gap-1 md:flex">

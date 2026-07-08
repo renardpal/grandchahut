@@ -6,7 +6,7 @@ export const Route = createFileRoute('/schedule')({
   component: Schedule,
 })
 
-type Filter = 'All' | 'Art' | 'Music'
+type Filter = 'Tout' | 'Acrobatie' | 'Musique' | 'Théâtre'
 
 function Schedule() {
   const [filter, setFilter] = useState<Filter>('All')
@@ -21,16 +21,14 @@ function Schedule() {
     <div className="px-5 py-16">
       <div className="mx-auto max-w-6xl">
         <h1 className="font-display text-4xl font-bold sm:text-5xl">
-          Classes &amp; Schedule
+          Ateliers et planning
         </h1>
         <p className="mt-3 max-w-2xl text-[var(--color-ink)]/80">
-          Classes run in eight-week terms. Tuition is $145 per term, materials
-          included. Openings change weekly — email us if a class you want
-          shows full.
+          Les ateliers sont organisés par cycle. Chaque cycle correspond à une discipline.
         </p>
 
         <div className="mt-8 flex gap-2">
-          {(['All', 'Art', 'Music'] as Array<Filter>).map((f) => (
+          {(['Tout', 'Acrobatie', 'Musique', 'Théâtre'] as Array<Filter>).map((f) => (
             <button
               key={f}
               type="button"
@@ -57,7 +55,7 @@ function Schedule() {
                 <div>
                   <span
                     className={`font-display inline-block rounded-full px-3 py-0.5 text-xs font-bold tracking-wide uppercase ${
-                      c.discipline === 'Art'
+                      c.discipline === 'Acrobatie'
                         ? 'bg-[var(--color-terracotta)] text-[var(--color-cream)]'
                         : 'bg-[var(--color-teal)] text-[var(--color-cream)]'
                     }`}
@@ -70,28 +68,34 @@ function Schedule() {
                 </div>
                 {c.spotsLeft === 0 ? (
                   <span className="font-display shrink-0 rounded-full bg-[var(--color-ink)]/10 px-3 py-1 text-xs font-bold">
-                    Full
+                    Complet
                   </span>
                 ) : (
                   <span className="font-display shrink-0 rounded-full bg-[var(--color-marigold)]/40 px-3 py-1 text-xs font-bold">
-                    {c.spotsLeft} spot{c.spotsLeft === 1 ? '' : 's'} left
+                    {c.spotsLeft} place{c.spotsLeft === 1 ? '' : 's'} restante{c.spotsLeft === 1 ? '' : 's'} 
                   </span>
                 )}
               </div>
 
               <dl className="mt-4 grid grid-cols-2 gap-x-4 gap-y-1 text-sm">
                 <dt className="font-semibold text-[var(--color-ink)]/50">
-                  Ages
+                  Âge
                 </dt>
                 <dd>{c.ageRange}</dd>
                 <dt className="font-semibold text-[var(--color-ink)]/50">
-                  When
+                  Horaire
                 </dt>
                 <dd>
                   {c.day}, {c.time}
                 </dd>
                 <dt className="font-semibold text-[var(--color-ink)]/50">
-                  Instructor
+                  Trimestre
+                </dt>
+                <dd>
+                  {c.month}
+                </dd>                
+                <dt className="font-semibold text-[var(--color-ink)]/50">
+                  Intervenant
                 </dt>
                 <dd>{c.instructor}</dd>
               </dl>

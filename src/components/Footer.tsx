@@ -5,7 +5,7 @@ export function Footer() {
     <footer className="border-t-4 border-[var(--color-ink)] bg-[var(--color-ink)] text-[var(--color-cream)]">
       <div className="mx-auto grid max-w-6xl gap-8 px-5 py-12 sm:grid-cols-3">
         <div>
-          <p className="font-display text-lg font-bold">Marigold &amp; Sound</p>
+          <p className="font-display text-lg font-bold">Grand Chahut</p>
           <p className="mt-2 text-sm leading-relaxed text-[var(--color-cream)]/70">
             Art and music classes for curious kids, ages 3 through 12, in the
             Elmhurst Arts Collective building.
@@ -39,7 +39,7 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-[var(--color-cream)]/15 py-4 text-center text-xs text-[var(--color-cream)]/50">
-        &copy; {new Date().getFullYear()} Marigold &amp; Sound Studio
+        &copy; {new Date().getFullYear()} Grand Chahut
       </div>
     </footer>
   )

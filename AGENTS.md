@@ -2,9 +2,9 @@
 
 Overview of the project structure for developers and AI agents working on this codebase.
 
-## Project Overview
+## Présentation
 
-Marigold & Sound is a marketing site for a neighborhood art and music studio for kids. It presents the studio's story, a filterable class schedule, a news feed, and a contact form. Built with TanStack Start and deployed on Netlify.
+Grand Chahut is a marketing site for a neighborhood art and music studio for kids. It presents the studio's story, a filterable class schedule, a news feed, and a contact form. Built with TanStack Start and deployed on Netlify.
 
 ### Tech Stack
 

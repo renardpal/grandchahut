@@ -9,12 +9,12 @@ export const Route = createFileRoute('/')({
 const highlights = [
   {
     icon: Paintbrush,
-    title: 'Art, hands-first',
+    title: 'Acrobatie, hands-first',
     copy: 'Clay, watercolor, collage, and drawing — kids build a real body of work, not just a pile of worksheets.',
   },
   {
     icon: Music2,
-    title: 'Music, ears-first',
+    title: 'Musique, ears-first',
     copy: 'Ukulele, piano, voice, and rhythm. We teach kids to listen before we hand them notation.',
   },
   {
@@ -42,35 +42,32 @@ function Home() {
         <div className="relative mx-auto grid max-w-6xl gap-12 md:grid-cols-[1.1fr_0.9fr] md:items-center">
           <div>
             <span className="font-display inline-block -rotate-2 rounded-full border-2 border-[var(--color-ink)] bg-[var(--color-marigold)] px-4 py-1 text-sm font-semibold">
-              Enrolling now for Fall term
+              Début Octobre 2026
             </span>
             <h1 className="font-display mt-6 text-5xl leading-[1.05] font-bold tracking-tight sm:text-6xl">
-              Where kids get
+              Acrobatie, 
               <br />
-              <span className="text-[var(--color-terracotta)]">paint-stained</span>{' '}
-              and
+              <span className="text-[var(--color-terracotta)]">musique</span>{' '}
+              
               <br />
-              <span className="text-[var(--color-teal)]">a little off-key</span>
+              <span className="text-[var(--color-teal)]">théâtre</span>
             </h1>
             <p className="mt-6 max-w-md text-lg leading-relaxed text-[var(--color-ink)]/80">
-              Marigold &amp; Sound is a neighborhood studio in Elmhurst offering
-              art and music classes for kids ages 3 to 12. No recitals to
-              dread, no gallery walls to live up to — just real instruments
-              and real materials, every week.
+              Grand Chahut, c'est un cycle d'ateliers après l'école, accessibles à tous les enfants de 3 à 11 ans, sans audition et sans classement !
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <Link
                 to="/schedule"
                 className="font-display inline-flex items-center gap-2 rounded-full bg-[var(--color-ink)] px-6 py-3 font-semibold text-[var(--color-cream)] transition-transform hover:-translate-y-0.5"
               >
-                See the schedule
+                Voir le programme
                 <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 to="/contact"
                 className="font-display inline-flex items-center gap-2 rounded-full border-2 border-[var(--color-ink)] px-6 py-3 font-semibold transition-transform hover:-translate-y-0.5"
               >
-                Ask a question
+                Nous contacter
               </Link>
             </div>
           </div>
@@ -78,22 +75,22 @@ function Home() {
           <div className="relative mx-auto w-full max-w-sm">
             <div className="rotate-3 rounded-3xl border-4 border-[var(--color-ink)] bg-[var(--color-teal)] p-6 shadow-[8px_8px_0_var(--color-ink)]">
               <p className="font-display text-2xl font-bold text-[var(--color-cream)]">
-                8
+                6 séances
               </p>
               <p className="text-sm font-semibold text-[var(--color-cream)]/85">
-                weekly class sections
+                par trimestre
               </p>
             </div>
             <div className="mt-6 -rotate-2 rounded-3xl border-4 border-[var(--color-ink)] bg-[var(--color-cream)] p-6 shadow-[8px_8px_0_var(--color-ink)]">
-              <p className="font-display text-2xl font-bold">6–8</p>
+              <p className="font-display text-2xl font-bold">10 enfants</p>
               <p className="text-sm font-semibold text-[var(--color-ink)]/70">
-                kids per class, on purpose
+                par atelier
               </p>
             </div>
             <div className="mt-6 rotate-1 rounded-3xl border-4 border-[var(--color-ink)] bg-[var(--color-marigold)] p-6 shadow-[8px_8px_0_var(--color-ink)]">
-              <p className="font-display text-2xl font-bold">since 2019</p>
+              <p className="font-display text-2xl font-bold">à Montréal et Thizy</p>
               <p className="text-sm font-semibold text-[var(--color-ink)]/70">
-                same building, same block
+                pas de déplacement après l'école
               </p>
             </div>
           </div>
@@ -143,7 +140,7 @@ function Home() {
               >
                 <span
                   className={`font-display inline-block rounded-full px-3 py-0.5 text-xs font-bold tracking-wide uppercase ${
-                    c.discipline === 'Art'
+                    c.discipline === 'Acrobatie'
                       ? 'bg-[var(--color-terracotta)] text-[var(--color-cream)]'
                       : 'bg-[var(--color-teal)] text-[var(--color-cream)]'
                   }`}

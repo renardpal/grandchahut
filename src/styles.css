@@ -5,10 +5,10 @@
 :root {
   --color-cream: #fbf4e6;
   --color-ink: #2c2620;
-  --color-marigold: #e8a13a;
-  --color-terracotta: #d1603d;
-  --color-teal: #3d7a72;
-  --color-plum: #6a3f5c;
+  --color-marigold: #e8a13a; 
+  --color-terracotta: #d8137f;
+  --color-teal: #b613c0;
+  --color-plum: #9e005d;
 }
 
 body {

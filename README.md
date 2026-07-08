@@ -1,4 +1,4 @@
-# Marigold & Sound
+# Grand Chahut
 
 A marketing site for a neighborhood art and music studio for kids: a home page introducing the studio, a filterable class schedule, a news feed, and a contact form.
 
