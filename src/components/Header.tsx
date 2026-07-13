@@ -6,6 +6,7 @@ const links = [
   { to: '/', label: 'Accueil' },
   { to: '/schedule', label: 'Atelier et Planning' },
   { to: '/news', label: 'Actualités' },
+  { to: '/project', label: 'Le Projet' },
   { to: '/contact', label: 'Contact' },
 ]
 
