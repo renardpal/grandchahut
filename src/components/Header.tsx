@@ -4,9 +4,8 @@ import { Menu, X, Sparkle } from 'lucide-react'
 
 const links = [
   { to: '/', label: 'Accueil' },
+  { to: '/project', label: 'Projet' },
   { to: '/schedule', label: 'Atelier et Planning' },
-  { to: '/news', label: 'Actualités' },
-  { to: '/project', label: 'Le Projet' },
   { to: '/contact', label: 'Contact' },
 ]
 

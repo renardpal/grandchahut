@@ -6,24 +6,6 @@ export const Route = createFileRoute('/')({
   component: Home,
 })
 
-const highlights = [
-  {
-    icon: Paintbrush,
-    title: 'Acrobatie, hands-first',
-    copy: 'Clay, watercolor, collage, and drawing — kids build a real body of work, not just a pile of worksheets.',
-  },
-  {
-    icon: Music2,
-    title: 'Musique, ears-first',
-    copy: 'Ukulele, piano, voice, and rhythm. We teach kids to listen before we hand them notation.',
-  },
-  {
-    icon: Users,
-    title: 'Small classes, always',
-    copy: 'Six to eight kids per class, one instructor who knows every name by the second week.',
-  },
-]
-
 function Home() {
   const featured = classes.slice(0, 3)
 
@@ -97,23 +79,6 @@ function Home() {
         </div>
       </section>
 
-      <section className="border-y-4 border-[var(--color-ink)] bg-[var(--color-ink)] px-5 py-16 text-[var(--color-cream)]">
-        <div className="mx-auto grid max-w-6xl gap-10 sm:grid-cols-3">
-          {highlights.map(({ icon: Icon, title, copy }) => (
-            <div key={title}>
-              <Icon
-                className="h-8 w-8 text-[var(--color-marigold)]"
-                strokeWidth={1.75}
-              />
-              <h2 className="font-display mt-4 text-xl font-bold">{title}</h2>
-              <p className="mt-2 text-sm leading-relaxed text-[var(--color-cream)]/75">
-                {copy}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
-
       <section className="px-5 py-20">
         <div className="mx-auto max-w-6xl">
           <div className="flex flex-wrap items-end justify-between gap-4">
@@ -124,7 +89,7 @@ function Home() {
               to="/schedule"
               className="inline-flex items-center gap-1 text-sm font-semibold text-[var(--color-terracotta)] hover:underline"
             >
-              Full schedule
+              Programme complet
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>

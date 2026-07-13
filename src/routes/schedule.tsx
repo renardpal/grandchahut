@@ -9,11 +9,11 @@ export const Route = createFileRoute('/schedule')({
 type Filter = 'Tout' | 'Acrobatie' | 'Musique' | 'Théâtre'
 
 function Schedule() {
-  const [filter, setFilter] = useState<Filter>('All')
+  const [filter, setFilter] = useState<Filter>('Tout')
 
   const filtered = useMemo(
     () =>
-      filter === 'All' ? classes : classes.filter((c) => c.discipline === filter),
+      filter === 'Tout' ? classes : classes.filter((c) => c.discipline === filter),
     [filter],
   )
 
@@ -23,8 +23,8 @@ function Schedule() {
         <h1 className="font-display text-4xl font-bold sm:text-5xl">
           Ateliers et planning
         </h1>
-        <p className="mt-3 max-w-2xl text-[var(--color-ink)]/80">
-          Les ateliers sont organisés par cycle. Chaque cycle correspond à une discipline.
+        <p className="mt-3 max-w-2xl">
+          🗺️ Tous les ateliers ont lieu à la mairie de Montréal.
         </p>
 
         <div className="mt-8 flex gap-2">
