@@ -3,9 +3,9 @@ import { Link } from '@tanstack/react-router'
 import { Menu, X, Sparkle } from 'lucide-react'
 
 const links = [
-  { to: '/', label: 'Home' },
-  { to: '/schedule', label: 'Classes & Schedule' },
-  { to: '/news', label: 'News' },
+  { to: '/', label: 'Accueil' },
+  { to: '/schedule', label: 'Atelier et Planning' },
+  { to: '/news', label: 'Actualités' },
   { to: '/contact', label: 'Contact' },
 ]
 

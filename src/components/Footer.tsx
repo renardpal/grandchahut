@@ -27,7 +27,7 @@ export function Footer() {
           </p>
           <div className="flex flex-col gap-1">
             <Link to="/schedule" className="w-fit hover:underline">
-              Classes &amp; Schedule
+              Ateliers et planning
             </Link>
             <Link to="/news" className="w-fit hover:underline">
               News

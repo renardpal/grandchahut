@@ -17,9 +17,9 @@ function News() {
   return (
     <div className="px-5 py-16">
       <div className="mx-auto max-w-3xl">
-        <h1 className="font-display text-4xl font-bold sm:text-5xl">News</h1>
+        <h1 className="font-display text-4xl font-bold sm:text-5xl">Actualités</h1>
         <p className="mt-3 text-[var(--color-ink)]/80">
-          What's happening around the studio.
+          Dernières informations de Grand Chahut.
         </p>
 
         <div className="mt-10 flex flex-col gap-8">
