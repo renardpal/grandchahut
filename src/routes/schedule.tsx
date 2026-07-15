@@ -26,6 +26,14 @@ function Schedule() {
         <p className="mt-3 max-w-2xl">
           🗺️ Tous les ateliers ont lieu à la mairie de Montréal.
         </p>
+        <br></br>
+        <p>
+          <strong>Pour les 3-6 ans </strong>(petite à grande section) : les séances ont lieu le mardi de 15h30 à 16h15 à la mairie de Montréal. Le groupe est accompagné à pied par des bénévoles. Le bus scolaire récupère les enfants à la fin de la séance. 
+        </p>
+        <br></br>
+        <p>
+          <strong>Pour les 7-11 ans </strong>(cp à cm2) : les séances ont lieu le mardi de 16h30 à 17h15 à la mairie de Montréal. Le groupe est amenée de Thizy à Montréal par le bus scolaire. Les parents viennent chercher leur enfant à Montréal en fin de séance. 
+        </p>
 
         <div className="mt-8 flex gap-2">
           {(['Tout', 'Acrobatie', 'Musique', 'Théâtre'] as Array<Filter>).map((f) => (
