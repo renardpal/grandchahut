@@ -4,44 +4,44 @@ Overview of the project structure for developers and AI agents working on this c
 
 ## Présentation
 
-Grand Chahut is a marketing site for a neighborhood art and music studio for kids. It presents the studio's story, a filterable class schedule, a news feed, and a contact form. Built with TanStack Start and deployed on Netlify.
+Grand Chahut is a marketing site for a neighborhood art and music studio for kids. It presents the studio's story, a filterable class schedule, and a contact page. Built with TanStack Router as a client-side SPA and deployed on GitHub Pages.
 
 ### Tech Stack
 
 | Layer | Technology |
 |-------|------------|
-| Framework | TanStack Start |
+| Framework | TanStack Router (SPA mode) |
 | Frontend | React 19, TanStack Router v1 |
 | Build | Vite 7 |
 | Styling | Tailwind CSS 4 |
-| Forms | Netlify Forms |
+| Contact | Plain `mailto:` link |
 | Language | TypeScript 5.9 (strict mode) |
-| Deployment | Netlify |
+| Deployment | GitHub Pages (via GitHub Actions) |
 
 ## Directory Structure
 
 ```
+├── index.html               # SPA shell, loads src/main.tsx
 ├── public
-│   ├── contact-form.html   # Static skeleton so Netlify's build bot registers the contact form
 │   └── favicon.ico
 ├── src
+│   ├── main.tsx             # React entry point, mounts the router
 │   ├── components
-│   │   ├── Header.tsx      # Sticky nav with mobile menu
-│   │   └── Footer.tsx      # Site footer with address and quick links
+│   │   ├── Header.tsx       # Sticky nav with mobile menu
+│   │   └── Footer.tsx       # Site footer with address and quick links
 │   ├── data
-│   │   ├── classes.ts      # Class catalog: name, discipline, age range, day/time, instructor, spots left
-│   │   └── news.ts         # News/announcement posts
+│   │   └── classes.ts       # Class catalog: name, discipline, age range, day/time, instructor, spots left
 │   ├── routes
-│   │   ├── __root.tsx      # Root layout: Header, Footer, global styles, SEO meta
-│   │   ├── index.tsx       # Home page
-│   │   ├── schedule.tsx    # Filterable class schedule (Art / Music / All)
-│   │   ├── news.tsx        # News feed
-│   │   └── contact.tsx     # Contact form (Netlify Forms via AJAX)
-│   ├── router.tsx          # TanStack Router setup
-│   └── styles.css          # Tailwind import, Google Fonts, CSS custom properties
-├── netlify.toml             # Build command, publish dir, dev server settings
+│   │   ├── __root.tsx       # Root layout: Header, Footer, Outlet
+│   │   ├── index.tsx        # Home page
+│   │   ├── schedule.tsx     # Filterable class schedule (Acrobatie / Musique / Théâtre / Tout)
+│   │   ├── project.tsx      # About/project page
+│   │   └── contact.tsx      # Contact page (mailto link)
+│   ├── router.tsx           # TanStack Router setup
+│   └── styles.css           # Tailwind import, Google Fonts, CSS custom properties
+├── .github/workflows/deploy.yml  # Build + publish to GitHub Pages on push to main
 ├── tsconfig.json             # `@/*` path alias for `src/*`
-└── vite.config.ts            # TanStack Start, Tailwind, Netlify plugins
+└── vite.config.ts            # TanStack Router codegen, Tailwind plugins
 ```
 
 ## Key Concepts
@@ -52,11 +52,11 @@ Routes are files in `src/routes/`. `__root.tsx` is the shared layout; each other
 
 ### Content
 
-Class and news content lives in plain TypeScript data files (`src/data/classes.ts`, `src/data/news.ts`) rather than a CMS or database — this is static marketing content that the studio owner is expected to edit directly and redeploy. If this grows into something an owner needs to edit without touching code, revisit with the `netlify-database` or `content-collections` approach.
+Class content lives in a plain TypeScript data file (`src/data/classes.ts`) rather than a CMS or database — this is static marketing content that the studio owner is expected to edit directly and redeploy.
 
-### Contact Form
+### Contact
 
-The contact form uses Netlify Forms. Because TanStack Start renders the form client-side, `public/contact-form.html` exists purely so Netlify's build-time scanner registers the form — it is never shown to users. The real form in `src/routes/contact.tsx` submits via `fetch('/contact-form.html', ...)` with `application/x-www-form-urlencoded` body. Form submissions land in the Netlify UI under Forms, not in this repo.
+The site no longer runs on Netlify, so the contact page (`src/routes/contact.tsx`) is a simple `mailto:` link rather than a hosted form. To bring back an in-page form without a server, a service like Formspree can be dropped in.
 
 ## Conventions
 
@@ -74,4 +74,15 @@ The contact form uses Netlify Forms. Because TanStack Start renders the form cli
 ```bash
 npm run dev      # Start dev server
 npm run build    # Production build
+npm run preview  # Preview the production build locally
 ```
+
+## Deployment
+
+Pushing to `main` triggers `.github/workflows/deploy.yml`:
+1. Installs dependencies
+2. Computes the correct Vite `base` path for GitHub Pages (root for a `<owner>.github.io` repo, `/repo-name/` otherwise)
+3. Builds the site
+4. Publishes `dist/` to GitHub Pages
+
+One-time repo setup: **Settings → Pages → Source → GitHub Actions**.
