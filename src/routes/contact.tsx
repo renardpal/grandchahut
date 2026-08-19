@@ -14,37 +14,24 @@ function Contact() {
             Contact
           </h1>
           <p className="mt-3 text-[var(--color-ink)]/80">
-            Questions about a class, a makeup lesson, or just want to swing by
-            for open studio hour? Reach out any way that's easy for you.
+            Pour en savoir plus sur ce projet, écrivez-nous un email.
           </p>
 
           <div className="mt-8 flex flex-col gap-5 text-sm">
             <div className="flex items-start gap-3">
               <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-[var(--color-terracotta)]" />
               <span>
-                214 Persimmon Lane, Studio 3
+                Grand Chahut est hébergé par la Maison Hirondelle
                 <br />
-                Elmhurst, IL 60126
-              </span>
-            </div>
-            <div className="flex items-start gap-3">
-              <Phone className="mt-0.5 h-5 w-5 shrink-0 text-[var(--color-terracotta)]" />
-              <span>(630) 555-0148</span>
+                11 place du Prieuré - 89420 Montréal              </span>
             </div>
             <div className="flex items-start gap-3">
               <Mail className="mt-0.5 h-5 w-5 shrink-0 text-[var(--color-terracotta)]" />
-              <span>hello@marigoldandsound.com</span>
+              <span>hello@grandchahut.com</span>
             </div>
           </div>
 
-          <div className="mt-8 rounded-2xl border-4 border-[var(--color-ink)] bg-[var(--color-teal)]/15 p-5 text-sm">
-            <p className="font-display font-bold">Studio hours</p>
-            <p className="mt-1 text-[var(--color-ink)]/80">
-              Mon–Fri, 3:30–6:30 PM (classes)
-              <br />
-              Saturday, 10–11 AM (open studio, drop-in)
-            </p>
-          </div>
+
         </div>
 
         <div
@@ -52,17 +39,16 @@ function Contact() {
           style={{ boxShadow: '8px 8px 0 var(--color-ink)' }}
         >
           <h2 className="font-display text-2xl font-bold">
-            Say hello
+            Inscrire votre enfant
           </h2>
           <p className="mt-2 max-w-sm text-[var(--color-ink)]/80">
-            The easiest way to reach us is by email — we usually write back
-            within a couple of days, sooner if it's about this week's class.
+            Si vous avez vu qu'il restait une place dans le planning des cours, écrivez-nous. 
           </p>
           <a
-            href="mailto:hello@marigoldandsound.com"
+            href="mailto:hello@grandchahut.com"
             className="font-display mt-6 rounded-full bg-[var(--color-ink)] px-6 py-3 font-semibold text-[var(--color-cream)] transition-transform hover:-translate-y-0.5"
           >
-            Email us
+            Nous envoyer un email
           </a>
         </div>
       </div>
