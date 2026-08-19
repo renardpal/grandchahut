@@ -7,35 +7,18 @@ export function Footer() {
         <div>
           <p className="font-display text-lg font-bold">Grand Chahut</p>
           <p className="mt-2 text-sm leading-relaxed text-[var(--color-cream)]/70">
-            Art and music classes for curious kids, ages 3 through 12, in the
-            Elmhurst Arts Collective building.
+            Hébergé par la Maison Hirondelle
           </p>
         </div>
         <div className="text-sm">
           <p className="font-display mb-2 font-semibold text-[var(--color-marigold)]">
-            Visit
+            Adresse
           </p>
           <p className="text-[var(--color-cream)]/80">
-            214 Persimmon Lane, Studio 3
-            <br />
-            Elmhurst, IL 60126
+          tel : 09 51 33 63 19          
+          <br />
+          11 place du Prieuré - 89420 Montréal
           </p>
-        </div>
-        <div className="text-sm">
-          <p className="font-display mb-2 font-semibold text-[var(--color-marigold)]">
-            Explore
-          </p>
-          <div className="flex flex-col gap-1">
-            <Link to="/schedule" className="w-fit hover:underline">
-              Ateliers et planning
-            </Link>
-            <Link to="/news" className="w-fit hover:underline">
-              News
-            </Link>
-            <Link to="/contact" className="w-fit hover:underline">
-              Contact
-            </Link>
-          </div>
         </div>
       </div>
       <div className="border-t border-[var(--color-cream)]/15 py-4 text-center text-xs text-[var(--color-cream)]/50">

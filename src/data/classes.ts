@@ -23,7 +23,7 @@ export const classes: Array<ClassSession> = [
     instructor: 'Miriam de Sela',
     spotsLeft: 10,
     description:
-      'Hand-building with air-dry clay — snails, hedgehogs, and whatever else wants to exist that week.',
+      'acrobatie',
   },
   {
     id: 'Fais voir le son de tes joues',
@@ -36,7 +36,7 @@ export const classes: Array<ClassSession> = [
     instructor: 'Sébastien Apert',
     spotsLeft: 10,
     description:
-      'Three chords, a dozen songs, and a lot of out-of-sync strumming that somehow still sounds good.',
+      'musique',
   },
   {
     id: 'watercolor-wanderers',

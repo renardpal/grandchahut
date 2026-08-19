@@ -35,7 +35,11 @@ function Home() {
               <span className="text-[var(--color-teal)]">théâtre</span>
             </h1>
             <p className="mt-6 max-w-md text-lg leading-relaxed text-[var(--color-ink)]/80">
-              Grand Chahut, c'est un cycle d'ateliers après l'école, accessibles à tous les enfants de 3 à 11 ans, sans audition et sans classement !
+              Grand Chahut, c'est un cycle d'ateliers après l'école, 
+              <br/>
+              accessibles à tous les enfants de 3 à 11 ans, 
+              <br/>
+              sans audition et sans classement !
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <Link
@@ -83,7 +87,7 @@ function Home() {
         <div className="mx-auto max-w-6xl">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <h2 className="font-display text-3xl font-bold">
-              A few classes running this term
+              Aperçu du programme
             </h2>
             <Link
               to="/schedule"
@@ -124,25 +128,6 @@ function Home() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className="px-5 pb-24">
-        <div className="mx-auto max-w-4xl rounded-3xl border-4 border-[var(--color-ink)] bg-[var(--color-marigold)]/30 p-10 text-center">
-          <h2 className="font-display text-3xl font-bold">
-            Come see the studio before you sign up
-          </h2>
-          <p className="mx-auto mt-3 max-w-xl text-[var(--color-ink)]/80">
-            We host a free open studio hour every Saturday at 10 AM — no
-            appointment needed, paint smocks provided.
-          </p>
-          <Link
-            to="/contact"
-            className="font-display mt-6 inline-flex items-center gap-2 rounded-full bg-[var(--color-ink)] px-6 py-3 font-semibold text-[var(--color-cream)]"
-          >
-            Plan a visit
-            <ArrowRight className="h-4 w-4" />
-          </Link>
         </div>
       </section>
     </div>
